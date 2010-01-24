@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  include SavageBeast::UserInit
+  
   has_many :jobs
   has_many :projects
 
@@ -50,6 +52,18 @@ class User < ActiveRecord::Base
     end
   end
 
+	def display_name
+	  "Foo Diddly"
+	end
+				
+	def admin?
+		false
+	end
+
+  def currently_online
+		false
+	end
+			
   protected
   
   def avatar_is_valid
@@ -59,5 +73,6 @@ class User < ActiveRecord::Base
       end
     end
   end
+  
   
 end
