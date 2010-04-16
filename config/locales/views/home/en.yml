@@ -1,0 +1,10 @@
+en:
+  _sponsors:
+    sponsored_by: "SD Ruby is sponsored by"
+  index:
+    title: "We are San Diego's Ruby community."
+    latest: "Latest from the"
+    episode: "Episode"
+    meetings: "Meetings"
+    meeting_details: "We meet the first Thursday of each month, on the campus of UCSD, in the Computer Science & Engineering Building."
+    google_group: "Google Group"

@@ -1,0 +1,13 @@
+en:
+  _form:
+    user_avatar: "Avatar"
+    user_full_name: "Full name"
+    user_email: "Email"
+    user_password: "Password"
+    user_password_confirmation: "Password confirmation"
+  new:
+    signup: "Signup"
+    submit: "Create account"
+  index:
+    user_introduction: SD Ruby is an awesome group of developers, designers, and all-around cool people.
+    project: "project"

@@ -1,6 +1,6 @@
 class UserSessionsController < ApplicationController
   before_filter :require_not_logged_in, :only => [:new, :create]
-
+  before_filter :set_locale 
   def new
     @user_session = UserSession.new
   end
@@ -11,6 +11,7 @@ class UserSessionsController < ApplicationController
       flash[:notice] = "Login successful!"
       redirect_back_or_default account_url
     else
+      puts @user_session.inspect
       render :action => :new
     end
   end

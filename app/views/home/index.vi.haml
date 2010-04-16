@@ -1,0 +1,59 @@
+- t "Chúng tôi là cộng đồng Ruby San Diego."
+
+#promo
+
+  .screenshot
+    - if @podcast && @podcast.screenshot
+      = link_to(image_tag(@podcast.screenshot.url, :size => "345x266", :alt => "Phân đoạn 0#{@podcast.id}"), podcasts_path)
+
+  %h2
+    Mới nhất từ
+    = "#{link_to I18n.t("sd_ruby_podcast"), podcasts_path}:"
+        
+  #name
+    - if @podcast
+      = link_to "Phân đoạn 0#{@podcast.id}: #{@podcast.name}", podcasts_path
+    
+
+#primary
+
+  %h2 Các cuộc họp
+
+  %p
+    Chúng tôi sẽ gặp nhau vào thứ năm đầu tiên của mỗi tháng, trong khuôn viên trường UCSD, tại tòa nhà Computer Science & Engineering.
+
+  %h2 Nhóm Google
+
+  %p
+    Chúng tôi sẽ điều hành một 
+    = link_to "mailing list", "http://groups.google.com/group/sdruby/topics?gvc=2"
+    giành cho việc thảo luận những vấn đề liên quan đến Ruby. Nếu bạn có câu hỏi về Ruby (hoặc Ruby on Rails), 
+    thì nhóm này có khả năng tìm ra giải pháp.
+
+  %p
+    = link_to "Đăng ký", "http://groups.google.com/group/sdruby"
+    hoặc 
+    = link_to("xem qua trang web", "http://groups.google.com/group/sdruby/topics?gvc=2") + "."
+    (Danh sách ban đầu thì
+    = link_to("ở đây", "http://list.sdruby.com/") + ".)"
+
+  %h2 Cần một lập trình viên Ruby?
+
+  %p
+    Tìm kiếm những lập trình viên làm nghề tự do hay làm việc toàn thời gian? 
+    Xin vui lòng gửi một bản tóm tắt ngắn gọn về nhu cầu của bạn đến
+    = link_to("mailing list", "http://groups.google.com/group/sdruby/topics?gvc=2") + "."
+
+  %p#recruiters
+    Nhà tuyển dụng: nếu bạn đăng danh sách việc làm lâu dài, bạn sẽ bị cấm.
+    Xin vui lòng sử dụng một bản tóm tắt ngắn với một liên kết để cung cấp thêm thông tin.
+    Kiểm tra các tài liệu lưu trữ để đảm bảo rằng danh sách của bạn chưa được đăng bởi nhà tuyển dụng khác.
+
+  %h2 Theo dõi chúng tôi tại Twitter
+
+  %p
+    Bạn có thể theo dõi
+    = link_to("@sdruby", "http://twitter.com/sdruby")
+    tại Twitter để được nhắc nhở về những cuộc họp hoặc những cập nhật khác.
+  
+= render :partial => "sponsors"

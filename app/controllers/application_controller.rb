@@ -8,6 +8,16 @@ class ApplicationController < ActionController::Base
   # Uncomment the :secret if you're not using the cookie session store
   protect_from_forgery # :secret => 'db24fa1f12cedfd2184dc9156cd2e704'
 
+  def set_locale 
+    if params[:locale] then 
+      I18n.locale = params[:locale] 
+    end
+  end
+
+  def default_url_options(options={}) 
+    {:locale => I18n.locale } 
+  end 
+
   private
   
   def current_user_session

@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-
+  before_filter :set_locale 
   def index
     @events = Event.find(:all)
   end

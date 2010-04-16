@@ -49,5 +49,20 @@ module ApplicationHelper
 
   end
   
+  def get_next_meeting
+    today = Time.now
+    monday = today.beginning_of_month.monday
+    thursday = monday + (3600 * 24 * 3)
+    if thursday.month != today.month
+      thursday = thursday + (3600 * 24 * 7)
+    end
+    if thursday < today
+      thursday = thursday + (3600 * 24 * 28)
+      if thursday.month == today.month
+        thursday = thursday + (3600 * 24 * 7)
+      end      
+    end
+    return thursday.to_date
+  end
 end
 

@@ -1,0 +1,26 @@
+vi:
+  _login:
+    login: "Đăng nhập"
+    logout: "Thoát"
+    signup: "Đăng ký"
+    or: "hoặc"
+    vi: "Vietnamese"
+    en: "English"
+  _header:
+    next_meeting: "Cuộc họp kế tiếp"
+    time: "7:30"
+    ucsd: "Tòa nhà UCSD CSE"
+    map: "Bản đồ"
+    direction: "Hướng đi"
+    calendar: "Lịch"
+  _slogan: "Chia sẻ ý tưởng, source code và niềm đam mê Ruby. Trưng bày những projects, gems và plugins mới nhất, hoặc những gì mà bạn đã học. Không phân biệt cấp độ, ... chỉ cần tham gia vui vẻ!"
+  _footer:
+    run_by: "SD Ruby được điều hành bởi"
+    help_from: "với sự giúp đỡ từ"
+    designed_by: "Logo được thiết kế bởi"
+  _navigation:
+    home: "Trang chủ"
+    members: "Thành viên"
+    projects: "Các dự án"
+    podcast: "Podcast"
+    jobs: "Việc làm"

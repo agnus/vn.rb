@@ -4,9 +4,21 @@
     .text
       Hey,
       = link_to(current_user.full_name, current_user, :class => "name") + "."
-      = link_to "Logout", logout_path
+      = link_to I18n.t("_login.logout"), logout_path
   - else
-    .text
-      = link_to "Login", login_path
-      or
-      = link_to "Signup", register_path
+    .text-left
+      = link_to I18n.t("_login.login"), login_path
+      = I18n.t("_login.or")
+      = link_to I18n.t("_login.signup"), register_path
+  .text-right
+    - my_params = params.clone
+    - if params[:locale] == 'vi'
+      = I18n.t("_login.vi")
+      |
+      - my_params[:locale] = 'en'
+      = link_to I18n.t("_login.en"), url_for(my_params)
+    - else
+      - my_params[:locale] = 'vi'
+      = link_to I18n.t("_login.vi"), url_for(my_params)
+      |
+      = I18n.t("_login.en")

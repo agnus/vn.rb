@@ -1,0 +1,13 @@
+vi:
+  _form:
+    user_avatar: "Ảnh đại diện:"
+    user_full_name: "Họ và tên:"
+    user_email: "Địa chỉ email:"
+    user_password: "Mật khẩu:"
+    user_password_confirmation: "Xác nhận mật khẩu:"
+  new:
+    signup: "Đăng ký"
+    submit: "Tạo tài khoản"
+  index:
+    user_introduction: "SD Ruby là một nhóm kinh khủng bao gồm những lập trình viên, những người thiết kế và tất cả những người điềm tĩnh và giỏi toàn diện"
+    project: "project"

@@ -1,8 +1,7 @@
--t "Members"
+-t I18n.t("_navigation.members")
 
 %p#members_intro
-  SD Ruby is an awesome group of developers, designers, and all-around cool people.
-
+  = I18n.t("index.user_introduction")
 %table#members
   - @users.each do |user|
     %tr.member
@@ -13,7 +12,7 @@
       - else
         %td ...
       - if not user.projects.empty?
-        %td= pluralize(user.projects.count, 'project')
+        %td= pluralize(user.projects.count, I18n.t("index.project"))
       - else
         %td ...
       

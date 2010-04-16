@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   # before_filter :require_user #TODO remove this once user creation is working
   before_filter :require_login_and_authorize, :only => [:edit, :update]
-
+  before_filter :set_locale 
   def index
     @users = User.all(:order => "full_name ASC", :include => :projects)
   end

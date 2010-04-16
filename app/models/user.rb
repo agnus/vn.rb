@@ -4,11 +4,11 @@ class User < ActiveRecord::Base
   has_many :jobs
   has_many :projects
 
-  acts_as_authentic
+  acts_as_authentic {|c| c.validate_email_field = false}
 
   validates_length_of :full_name, :minimum => 2
   validates_uniqueness_of :email
-  validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
+  validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, :message => I18n.t("activerecord.errors.messages.bad_email")
 
   validate :avatar_is_valid
 
@@ -69,7 +69,7 @@ class User < ActiveRecord::Base
   def avatar_is_valid
     if self.avatar_file_name?
       unless ["image/gif", "image/jpeg", "image/png"].include?(self.avatar_content_type)
-        errors.add_to_base "Avatar must be a GIF, JPEG, or PNG"
+        errors.add_to_base I18n.t("activerecord.errors.messages.avatar_invalid")
       end
     end
   end

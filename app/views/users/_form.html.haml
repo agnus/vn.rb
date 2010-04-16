@@ -1,19 +1,24 @@
 %p
-  %label{:for => "user_avatar"} Avatar:
+  %label{:for => "user_avatar"} 
+    = I18n.t("_form.user_avatar")
   = f.file_field :avatar, :size => 20
   
 %p
-  %label{:for => "user_full_name"} Full name:
+  %label{:for => "user_full_name"} 
+    =I18n.t("_form.user_full_name")
   = f.text_field :full_name, :size => 35
 
 %p
-  %label{:for => "user_email"} Email:
+  %label{:for => "user_email"} 
+    =I18n.t("_form.user_email")
   = f.text_field :email, :size => 35
 
 %p
-  %label{:for => "user_password"} Password:
+  %label{:for => "user_password"}
+    =I18n.t("_form.user_password")
   = f.password_field :password, :size => 35
 
 %p
-  %label{:for => "user_password_confirmation"} Password confirmation:
+  %label{:for => "user_password_confirmation"} 
+    =I18n.t("_form.user_password_confirmation")
   = f.password_field :password_confirmation, :size => 35

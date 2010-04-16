@@ -1,6 +1,6 @@
 class WidgetsController < ApplicationController
   include WidgetsHelper
-
+  before_filter :set_locale 
   def index
     @widgets = Widget.find(:all, :order => "row")
     @widgets.each do |widget|

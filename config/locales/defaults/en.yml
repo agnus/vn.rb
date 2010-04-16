@@ -1,0 +1,10 @@
+en:
+  date:
+    formats:
+      custom: "%A, %B %d"
+
+  activerecord:
+    errors:
+      messages:
+        bad_email: "should look like an email address"
+        avatar_invalid: "Avatar must be GIF, JPEG, or PNG"

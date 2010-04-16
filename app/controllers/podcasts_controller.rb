@@ -1,6 +1,6 @@
 class PodcastsController < ApplicationController
   before_filter :require_user, :except => [:index, :show]
-  
+  before_filter :set_locale 
   def index
     @podcasts = Podcast.published.find(:all, :order => "id DESC")
     respond_to do |format|

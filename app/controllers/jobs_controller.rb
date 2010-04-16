@@ -1,7 +1,7 @@
 class JobsController < ApplicationController
   before_filter :require_login, :except => [:index, :show]
   before_filter :load_job_and_authorize, :only => [:edit, :update, :destroy]
-
+  before_filter :set_locale 
   def index
     @jobs = Job.published.newest_first
   end

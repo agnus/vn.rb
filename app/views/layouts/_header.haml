@@ -5,15 +5,17 @@
     = link_to(image_tag("application/logo.png", :size => "331x105", :alt => "iCalendar"), "/")
 
   #upcoming
-    %span Next meeting:
-    #date Thursday, January 7
-    7:30pm, 
-    = link_to "UCSD CSE Building", "http://www.cs.ucsd.edu/", :id => "venue"
+    %span 
+      = I18n.t("_header.next_meeting") + ":"
+    #date 
+      = I18n.l(get_next_meeting, :format => "custom")
+    = I18n.t("_header.time") + I18n.t("time.pm")
+    = link_to I18n.t("_header.ucsd"), "http://www.cs.ucsd.edu/", :id => "venue"
     #actions
       = link_to(image_tag("application/ical.gif", :size => "36x14", :alt => "iCal"), "http://tinyurl.com/bwlae4")
-      = link_to "map", "http://tinyurl.com/2f486e"
-      = link_to "directions", "http://tinyurl.com/2f486e"
-      = link_to "calendar", "http://tinyurl.com/bhrj6c"
+      = link_to I18n.t("_header.map"), "http://tinyurl.com/2f486e"
+      = link_to I18n.t("_header.direction"), "http://tinyurl.com/2f486e"
+      = link_to I18n.t("_header.calendar"), "http://tinyurl.com/bhrj6c"
   
   #podcast
     = link_to(image_tag("application/podcast.gif", :size => "102x104", :alt => "iCalendar"), podcasts_url)

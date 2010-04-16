@@ -1,0 +1,26 @@
+en:
+  _login:
+    login: "Login"
+    logout: "Logout"
+    signup: "Signup"
+    or: "or"
+    vi: "Vietnamese"
+    en: "English"
+  _header:
+    next_meeting: "Next meeting"
+    time: "7:30"
+    ucsd: "UCSD CSE Building"
+    map: "map"
+    direction: "directions"
+    calendar: "calendar"
+  _slogan: "Share ideas, code, and your love for Ruby. Show off your latest project, gems and plugins,<br /> or something you learned. Open to all skill levels&hellip; just show up and join the fun!"
+  _footer:
+    run_by: "SD Ruby is run by "
+    help_from: "with help from"
+    designed_by: "Logo designed by "
+  _navigation:
+    home: "Home"
+    members: "Members"
+    projects: "Projects"
+    podcast: "Podcast"
+    jobs: "Jobs"
